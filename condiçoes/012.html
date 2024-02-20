@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body><h1>País de origem</h1>
+    país de origem: <input type="String" name="txtpa" id="txtpa"> 
+    <input type="button" value="verificar" onclick="nomear()">
+   <div id="res">
+
+   </div>
+   <script>
+        function nomear(){
+            var txtv = document.querySelector('input#txtpa')
+            var res = document.querySelector('div#res')
+            var pa = String(txtv.value)
+            res.innerHTML = `Vivendo no país <strong> ${pa} </strong>`
+            if (pa == 'Brasil'){
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`
+            }else{
+                res.innerHTML += `<p>Você é estrangeiro</p>`
+            }
+            
+            res.innerHTML += `<strong><p>Seja bem vindo(a)</p></strong>`
+        }
+
+    </script>
+  
+    
+</body>
+</html>
